@@ -3,157 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SENA Regional Cauca - Diseño Responsivo</title>
-    <link rel="stylesheet" href="css/movil.css">
+    <title>Conejo Store</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
 
-    <section class="hero">
-        <div class="container">
-            <div class="hero-texto">
-                <h1>Aprende diseño web desde cero con el SENA</h1>
-                <p>Cursos gratuitos de HTML5, CSS3 y más. Certificación oficial reconocida en todo el país. Aprende a tu ritmo desde cualquier dispositivo.</p>
-                <div class="hero-btns">
-                    <a href="#" class="btn-hero-p">Inscribirme gratis</a>
-                    <a href="#" class="btn-hero-s">Ver programas →</a>
-                </div>
-            </div>
-            <div class="hero-imagen"></div>
+<header>
+    <h1>Conejo Store</h1>
+
+    <div class="carrito-detalle">
+    <h3>🛒 Tu carrito</h3>
+    <ul id="lista-carrito"></ul>
+    <button onclick="vaciarCarrito()" class="btn-vaciar">Vaciar carrito</button>
+    </div>
+</header>
+<nav>
+    <a href="#" onclick="mostrarSeccion('inicio')">Inicio</a>
+    <a href="#" onclick="mostrarSeccion('mujer')">Mujer</a>
+    <a href="#" onclick="mostrarSeccion('hombre')">Hombre</a>
+    <a href="#" onclick="mostrarSeccion('ninos')">Niños</a>
+</nav>
+
+<section class="hero">
+    <div class="contenido-hero">
+        <h2>Nueva Colección </h2>
+        <p>Descubre lo último</p>
+        <a href="#mujer" class="btn-hero">Ver productos</a>
+    </div>
+</section>
+
+<input type="text" placeholder="Buscar producto..." class="buscador">
+
+<section id="inicio">
+    <h2>Bienvenido a Conejo Store</h2>
+    <p>Encuentra la mejor ropa aquí</p>
+</section>
+
+<section id="mujer">
+    <h2>Ropa de Mujer</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="producto">
+            <span class="oferta">OFERTA</span>
+            <img src="img/mujer/camisa.jpg" alt="Camisa">
+            <h3>Camisa Moderna</h3>
+            <p>$50.000</p>
+
+         <div class="controles">
+        <button onclick="cambiarCantidad('camisa', -1)">-</button>
+        <span id="camisa">0</span>
+        <button onclick="cambiarCantidad('camisa', 1)">+</button>
+    </div>
+    </div>
+
+        <div class="producto">
+            <span class="oferta">OFERTA</span>
+            <img src="img/mujer/vestido.jpg" alt="Vestido">
+            <h3>Vestido Elegante</h3>
+            <p>$90.000</p>
+       
+        <div class="controles">
+        <button onclick="cambiarCantidad('vestido', -1)">-</button>
+        <span id="vestido">0</span>
+        <button onclick="cambiarCantidad('vestido', 1)">+</button>
+    </div>
+    </div>
+
+        <div class="producto">
+            <img src="img/mujer/blusa.jpg" alt="Blusa">
+            <h3>Blusa Casual</h3>
+            <p>$40.000</p>
+       
+        <div class="controles">
+        <button onclick="cambiarCantidad('blusa', -1)">-</button>
+        <span id="blusa">0</span>
+        <button onclick="cambiarCantidad('blusa', 1)">+</button>
+    </div>
+    </div>
+
+    </div>
+</section>
+
+<section id="hombre">
+    <h2>Ropa de Hombre</h2>
+
+    <div class="contenedor-productos">
+
+        <div class="producto">
+            <span class="oferta">OFERTA</span>
+            <img src="img/hombre/camisa.jpg" alt="Camisa">
+            <h3>Camisa Casual</h3>
+            <p>$60.000</p>
+       
+         <div class="controles">
+        <button onclick="cambiarCantidad('camisaH', -1)">-</button>
+        <span id="camisaH">0</span>
+        <button onclick="cambiarCantidad('camisaH', 1)">+</button>
+    </div>
         </div>
-    </section>
 
-    <section class="seccion" style="background: #f8f9fa">
-        <div class="container">
-            <h2 class="seccion-titulo">¿Por qué aprender con nosotros?</h2>
-            <p class="seccion-sub">Formación técnica de calidad con enfoque práctico</p>
-            <div class="grid-carac">
-                
-                <div class="carac-item">
-                    <div class="carac-icono">🏆</div>
-                    <h3>Certificación SENA</h3>
-                    <p>Certificado con validez nacional e internacional respaldado por el Ministerio de Trabajo de Colombia.</p>
-                </div>
+        <div class="producto">
+            <span class="oferta">OFERTA</span>
+            <img src="img/hombre/pantalon.jpg" alt="Pantalón">
+            <h3>Pantalón Clásico</h3>
+            <p>$100.000</p>
+       
+         <div class="controles">
+        <button onclick="cambiarCantidad('pantalon', -1)">-</button>
+        <span id="pantalon">0</span>
+        <button onclick="cambiarCantidad('pantalon', 1)">+</button>
+    </div>
+    </div>
 
-                <div class="carac-item">
-                    <div class="carac-icono">💻</div>
-                    <h3>100% Práctico</h3>
-                    <p>Cada sesión incluye ejercicios reales y proyectos de caso de estudio con contexto regional.</p>
-                </div>
+        <div class="producto">
+            <img src="img/hombre/chaqueta.jpg" alt="Chaqueta">
+            <h3>Chaqueta Moderna</h3>
+            <p>$150.000</p>
+        
+        
+    <div class="controles">
+        <button onclick="cambiarCantidad('chaqueta', -1)">-</button>
+        <span id="chaqueta">0</span>
+        <button onclick="cambiarCantidad('chaqueta', 1)">+</button>
+    </div>
+        </div>
 
-                <div class="carac-item">
-                    <div class="carac-icono">⏱️</div>
-                    <h3>Aprende a tu ritmo</h3>
-                    <p>Accede a los materiales las 24 horas. Clases grabadas disponibles por 6 meses adicionales.</p>
-                </div>
+    </div>
+</section>
 
-                <div class="carac-item">
-                    <div class="carac-icono">👩‍🏫</div>
-                    <h3>Instructores expertos</h3>
-                    <p>Instructores con experiencia real en la industria del desarrollo web y diseño UX.</p>
-                </div>
+<section id="ninos" style="display:none;">
+    <h2>Ropa de Niños</h2>
 
-                <div class="carac-item">
-                    <div class="carac-icono">🌐</div>
-                    <h3>Portfolio profesional</h3>
-                    <p>Al terminar tendrás 5 proyectos reales publicados en línea para mostrar a empleadores.</p>
-                </div>
+    <div class="contenedor-productos">
 
-                <div class="carac-item">
-                    <div class="carac-icono">🤝</div>
-                    <h3>Comunidad activa</h3>
-                    <p>Únete a más de 2.000 aprendices de diseño web en el grupo de apoyo de WhatsApp y Discord.</p>
-                </div>
+        <div class="producto">
+            <img src="img/niños/camiseta.jpg" alt="Niño">
+            <h3>Camiseta Niño</h3>
+            <p>$30.000</p>
 
+            <div class="controles">
+                <button onclick="cambiarCantidad('nino1', -1)">-</button>
+                <span id="nino1">0</span>
+                <button onclick="cambiarCantidad('nino1', 1)">+</button>
             </div>
         </div>
-    </section>
 
-    <section class="seccion">
-        <div class="container">
-            <h2 class="seccion-titulo">Planes de formación</h2>
-            <p class="seccion-sub">Todos los planes incluyen certificación SENA</p>
-            <div class="precios-grid">
-                
-                <div class="precio-card">
-                    <p class="precio-nombre">Básico</p>
-                    <p class="precio-valor">Gratis</p>
-                    <p class="precio-periodo">Acceso permanente</p>
-                    <ul class="precio-lista">
-                        <li>Temáticas 1 a 4</li>
-                        <li>Ejercicios básicos</li>
-                        <li>Foros de la comunidad</li>
-                    </ul>
-                    <a href="#" class="btn-precio">Comenzar gratis</a>
-                </div>
+    </div>
+</section>
 
-                <div class="precio-card destacado">
-                    <span class="precio-badge">Más popular</span>
-                    <p class="precio-nombre">Completo</p>
-                    <p class="precio-valor">Gratis</p>
-                    <p class="precio-periodo">SENA - Ficha presencial</p>
-                    <ul class="precio-lista">
-                        <li>Las 11 temáticas completas</li>
-                        <li>66 horas certificadas</li>
-                        <li>Instructor en vivo</li>
-                        <li>Proyecto integrador</li>
-                    </ul>
-                    <a href="#" class="btn-precio">Inscribirme al SENA</a>
-                </div>
+<script>
+let carritoTotal = 0;
+let productos = JSON.parse(localStorage.getItem("carrito")) || {};
 
-                <div class="precio-card">
-                    <p class="precio-nombre">Corporativo</p>
-                    <p class="precio-valor">A consultar</p>
-                    <p class="precio-periodo">Equipos de trabajo</p>
-                    <ul class="precio-lista">
-                        <li>Grupos de 10+ personas</li>
-                        <li>Instructor dedicado</li>
-                        <li>Contenido personalizado</li>
-                    </ul>
-                    <a href="#" class="btn-precio">Solicitar cotización</a>
-                </div>
+function mostrarSeccion(id) {
+    let secciones = document.querySelectorAll("section");
 
-            </div>
-        </div>
-    </section>
+    secciones.forEach(sec => {
+        sec.style.display = "none";
+    });
 
-    <section class="seccion" style="background: #f8f9fa">
-        <div class="container">
-            <h2 class="seccion-titulo">¿Tienes preguntas?</h2>
-            <p class="seccion-sub">Escríbenos y te respondemos en menos de 24 horas</p>
-            <div class="form-contacto">
-                <form>
-                    <div class="form-row">
-                        <div class="form-grupo">
-                            <label>Nombre completo *</label>
-                            <input type="text" placeholder="María García">
-                        </div>
-                        <div class="form-grupo">
-                            <label>Correo electrónico *</label>
-                            <input type="email" placeholder="maria@correo.com">
-                        </div>
-                    </div>
-                    <div class="form-grupo">
-                        <label>Tema de consulta</label>
-                        <select>
-                            <option>Inscripción al programa</option>
-                            <option>Contenido del curso</option>
-                            <option>Certificación</option>
-                            <option>Plan corporativo</option>
-                        </select>
-                    </div>
-                    <div class="form-grupo">
-                        <label>Mensaje</label>
-                        <textarea placeholder="Cuéntanos tu consulta..."></textarea>
-                    </div>
-                    <button type="submit" class="btn-enviar">Enviar mensaje</button>
-                </form>
-            </div>
-        </div>
-    </section>
+    document.getElementById(id).style.display = "block";
+}
 
-    <footer class="sitio-footer">
-        <p>© 2026 SENA - Centro de Teleinformática y Producción Industrial Regional Cauca</p>
-    </footer>
+function cambiarCantidad(id, cambio) {
+    if (!productos[id]) {
+        productos[id] = 0;
+    }
 
+    productos[id] += cambio;
+
+    if (productos[id] < 0) {
+        productos[id] = 0;
+    }
+
+    actualizar();
+}
+
+function actualizar() {
+    carritoTotal = 0;
+    let lista = document.getElementById("lista-carrito");
+    lista.innerHTML = "";
+
+    for (let id in productos) {
+        if (productos[id] > 0) {
+            carritoTotal += productos[id];
+
+            let li = document.createElement("li");
+            li.innerText = id + " x" + productos[id];
+            lista.appendChild(li);
+        }
+
+        let elemento = document.getElementById(id);
+        if (elemento) {
+            elemento.innerText = productos[id];
+        }
+    }
+
+    document.getElementById("carrito").innerText = carritoTotal;
+
+    localStorage.setItem("carrito", JSON.stringify(productos));
+}
+
+function vaciarCarrito() {
+    productos = {};
+    actualizar();
+}
+
+window.onload = actualizar;
+</script>
 </body>
 </html>
